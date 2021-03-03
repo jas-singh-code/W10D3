@@ -59,12 +59,14 @@ var Board = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Board", this.props.board.grid.map(function (row, idx) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.board.grid.map(function (row, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+          className: "board",
           key: idx,
           id: row
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tile_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-          board: _this2.props.board.grid
+          board: _this2.props.board.grid,
+          updateGame: _this2.props.updateGame
         }));
       }));
     }
@@ -128,19 +130,28 @@ var Game = /*#__PURE__*/function (_React$Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      board: new _minesweeper_js__WEBPACK_IMPORTED_MODULE_1__.Board(6, 2)
+      board: new _minesweeper_js__WEBPACK_IMPORTED_MODULE_1__.Board(9, 2)
     };
+    _this.updateGame = _this.updateGame.bind(_assertThisInitialized(_this));
     return _this;
   }
 
   _createClass(Game, [{
     key: "updateGame",
-    value: function updateGame() {}
+    value: function updateGame(li, flag) {
+      alert("the connection has been made!");
+
+      if (flag) {
+        li.addClass("flag");
+        li.innerHTML("⚑"); // ⚑
+      }
+    }
   }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Board_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
-        board: this.state.board
+        board: this.state.board,
+        updateGame: this.updateGame
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello"));
     }
   }]);
@@ -164,6 +175,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -193,19 +206,41 @@ var Tile = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Tile);
 
   function Tile(props) {
+    var _this;
+
     _classCallCheck(this, Tile);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.props = props;
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Tile, [{
+    key: "handleClick",
+    value: function handleClick(e) {
+      var li = e.currentTarget;
+      var alt = e.altKey;
+      var flag = false;
+
+      if (alt) {
+        flag = (_readOnlyError("flag"), true);
+      }
+
+      ;
+      return this.props.updateGame(li, flag);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.board.map(function (col, idx) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "tile",
+        onClick: this.handleClick
+      }, this.props.board.map(function (col, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
           key: idx,
           id: col
-        }, "column");
+        }, "_");
       }));
     }
   }]);
