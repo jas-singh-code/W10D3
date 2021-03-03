@@ -1,165 +1,13 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
-
-/***/ "./components/Board.jsx":
-/*!******************************!*\
-  !*** ./components/Board.jsx ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Board)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Tile_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tile.jsx */ "./components/Tile.jsx");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-var Board = /*#__PURE__*/function (_React$Component) {
-  _inherits(Board, _React$Component);
-
-  var _super = _createSuper(Board);
-
-  function Board(props) {
-    var _this;
-
-    _classCallCheck(this, Board);
-
-    _this = _super.call(this, props);
-    _this.props = props;
-    return _this;
-  }
-
-  _createClass(Board, [{
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, this.props.board.grid.map(function (row, idx) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-          className: "board",
-          key: idx,
-          id: row
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tile_jsx__WEBPACK_IMPORTED_MODULE_1__.default, {
-          board: _this2.props.board.grid,
-          updateGame: _this2.props.updateGame
-        }));
-      }));
-    }
-  }]);
-
-  return Board;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-
-
-/***/ }),
 
 /***/ "./components/Game.jsx":
 /*!*****************************!*\
   !*** ./components/Game.jsx ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Game)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _minesweeper_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../minesweeper.js */ "./minesweeper.js");
-/* harmony import */ var _Board_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Board.jsx */ "./components/Board.jsx");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-var Game = /*#__PURE__*/function (_React$Component) {
-  _inherits(Game, _React$Component);
-
-  var _super = _createSuper(Game);
-
-  function Game(props) {
-    var _this;
-
-    _classCallCheck(this, Game);
-
-    _this = _super.call(this, props);
-    _this.state = {
-      board: new _minesweeper_js__WEBPACK_IMPORTED_MODULE_1__.Board(9, 2)
-    };
-    _this.updateGame = _this.updateGame.bind(_assertThisInitialized(_this));
-    return _this;
-  }
-
-  _createClass(Game, [{
-    key: "updateGame",
-    value: function updateGame(li, flag) {
-      alert("the connection has been made!");
-
-      if (flag) {
-        li.addClass("flag");
-        li.innerHTML("⚑"); // ⚑
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Board_jsx__WEBPACK_IMPORTED_MODULE_2__.default, {
-        board: this.state.board,
-        updateGame: this.updateGame
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "Hello"));
-    }
-  }]);
-
-  return Game;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/components/Game.jsx: Unexpected token, expected \",\" (46:4)\n\n\u001b[0m \u001b[90m 44 |\u001b[39m             \u001b[0m\n\u001b[0m \u001b[90m 45 |\u001b[39m         \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 48 |\u001b[39m     render() {\u001b[0m\n\u001b[0m \u001b[90m 49 |\u001b[39m         \u001b[36mreturn\u001b[39m (\u001b[0m\n    at Object._raise (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.unexpected (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:9668:16)\n    at Object.expect (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:9654:28)\n    at Object.parseCallExpressionArguments (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:10819:14)\n    at Object.parseCoverCallAndAsyncArrowHead (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:10745:29)\n    at Object.parseSubscript (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:10681:19)\n    at Object.parseSubscripts (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:10654:19)\n    at Object.parseExprSubscripts (/home/jaspreet/aaclasswork/Classwork_W10D3/minesweeper/node_modules/@babel/parser/lib/index.js:10643:17)");
 
 /***/ }),
 
@@ -169,6 +17,7 @@ var Game = /*#__PURE__*/function (_React$Component) {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Tile)
@@ -176,7 +25,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -211,7 +70,6 @@ var Tile = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Tile);
 
     _this = _super.call(this, props);
-    _this.props = props;
     _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -219,12 +77,19 @@ var Tile = /*#__PURE__*/function (_React$Component) {
   _createClass(Tile, [{
     key: "handleClick",
     value: function handleClick(e) {
-      var li = e.currentTarget;
+      var _e$target$id$split$ma = e.target.id.split(",").map(function (el) {
+        return parseInt(el);
+      }),
+          _e$target$id$split$ma2 = _slicedToArray(_e$target$id$split$ma, 2),
+          row = _e$target$id$split$ma2[0],
+          col = _e$target$id$split$ma2[1];
+
+      var li = this.props.board[row][col];
       var alt = e.altKey;
       var flag = false;
 
       if (alt) {
-        flag = (_readOnlyError("flag"), true);
+        flag = true;
       }
 
       ;
@@ -233,13 +98,15 @@ var Tile = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tile",
         onClick: this.handleClick
       }, this.props.board.map(function (col, idx) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
           key: idx,
-          id: col
+          id: [_this2.props.rowIdx, idx]
         }, "_");
       }));
     }
@@ -252,180 +119,13 @@ var Tile = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./minesweeper.js":
-/*!************************!*\
-  !*** ./minesweeper.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Tile": () => (/* binding */ Tile),
-/* harmony export */   "Board": () => (/* binding */ Board)
-/* harmony export */ });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var Tile = /*#__PURE__*/function () {
-  function Tile(board, pos) {
-    _classCallCheck(this, Tile);
-
-    this.board = board;
-    this.pos = pos;
-    this.bombed = false;
-    this.explored = false;
-    this.flagged = false;
-  }
-
-  _createClass(Tile, [{
-    key: "adjacentBombCount",
-    value: function adjacentBombCount() {
-      var bombCount = 0;
-      this.neighbors().forEach(function (neighbor) {
-        if (neighbor.bombed) {
-          bombCount++;
-        }
-      });
-      return bombCount;
-    }
-  }, {
-    key: "explore",
-    value: function explore() {
-      if (this.flagged || this.explored) {
-        return this;
-      }
-
-      this.explored = true;
-
-      if (!this.bombed && this.adjacentBombCount() === 0) {
-        this.neighbors().forEach(function (tile) {
-          tile.explore();
-        });
-      }
-    }
-  }, {
-    key: "neighbors",
-    value: function neighbors() {
-      var _this = this;
-
-      var adjacentCoords = [];
-      Tile.DELTAS.forEach(function (delta) {
-        var newPos = [delta[0] + _this.pos[0], delta[1] + _this.pos[1]];
-
-        if (_this.board.onBoard(newPos)) {
-          adjacentCoords.push(newPos);
-        }
-      });
-      return adjacentCoords.map(function (coord) {
-        return _this.board.grid[coord[0]][coord[1]];
-      });
-    }
-  }, {
-    key: "plantBomb",
-    value: function plantBomb() {
-      this.bombed = true;
-    }
-  }, {
-    key: "toggleFlag",
-    value: function toggleFlag() {
-      if (!this.explored) {
-        this.flagged = !this.flagged;
-        return true;
-      }
-
-      return false;
-    }
-  }]);
-
-  return Tile;
-}();
-Tile.DELTAS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
-var Board = /*#__PURE__*/function () {
-  function Board(gridSize, numBombs) {
-    _classCallCheck(this, Board);
-
-    this.gridSize = gridSize;
-    this.grid = [];
-    this.numBombs = numBombs;
-    this.generateBoard();
-    this.plantBombs();
-  }
-
-  _createClass(Board, [{
-    key: "generateBoard",
-    value: function generateBoard() {
-      for (var i = 0; i < this.gridSize; i++) {
-        this.grid.push([]);
-
-        for (var j = 0; j < this.gridSize; j++) {
-          var tile = new Tile(this, [i, j]);
-          this.grid[i].push(tile);
-        }
-      }
-    }
-  }, {
-    key: "onBoard",
-    value: function onBoard(pos) {
-      return pos[0] >= 0 && pos[0] < this.gridSize && pos[1] >= 0 && pos[1] < this.gridSize;
-    }
-  }, {
-    key: "plantBombs",
-    value: function plantBombs() {
-      var totalPlantedBombs = 0;
-
-      while (totalPlantedBombs < this.numBombs) {
-        var row = Math.floor(Math.random() * (this.gridSize - 1));
-        var col = Math.floor(Math.random() * (this.gridSize - 1));
-        var tile = this.grid[row][col];
-
-        if (!tile.bombed) {
-          tile.plantBomb();
-          totalPlantedBombs++;
-        }
-      }
-    }
-  }, {
-    key: "lost",
-    value: function lost() {
-      var lost = false;
-      this.grid.forEach(function (row) {
-        row.forEach(function (tile) {
-          if (tile.bombed && tile.explored) {
-            lost = true;
-          }
-        });
-      });
-      return lost;
-    }
-  }, {
-    key: "won",
-    value: function won() {
-      var won = true;
-      this.grid.forEach(function (row) {
-        row.forEach(function (tile) {
-          if (tile.flagged === tile.revealed || tile.flagged !== tile.bombed) {
-            won = false;
-          }
-        });
-      });
-      return won;
-    }
-  }]);
-
-  return Board;
-}();
-
-/***/ }),
-
 /***/ "./node_modules/object-assign/index.js":
 /*!*********************************************!*\
   !*** ./node_modules/object-assign/index.js ***!
   \*********************************************/
 /***/ ((module) => {
 
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -526,6 +226,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.1
  * react-dom.development.js
  *
@@ -26793,6 +26494,7 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 function checkDCE() {
@@ -26836,6 +26538,7 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.1
  * react.development.js
  *
@@ -29179,6 +28882,7 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -29194,6 +28898,7 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.1
  * scheduler-tracing.development.js
  *
@@ -29551,6 +29256,7 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.1
  * scheduler.development.js
  *
@@ -30405,6 +30111,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -30420,6 +30127,7 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -30485,8 +30193,9 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!***********************************!*\
   !*** ./src/react_minesweeper.jsx ***!
   \***********************************/
